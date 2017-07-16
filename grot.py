@@ -1,6 +1,8 @@
 from random import randint
 from collections import namedtuple
 
+
+
 def sample_generator(side_length):
     
     """Create a sample with grots"""
@@ -203,3 +205,6 @@ class Viewer():
             print(chains[i])
         for i in sample2:
             print(i)
+
+        
+2)
