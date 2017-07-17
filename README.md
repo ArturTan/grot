@@ -2,7 +2,7 @@
 A solution to grot game
 
 This short script is able to:
-1) generate grot sample like below:
+1) generate grot sample like below depending on the side you want:
 ```
 sample = [
    ['u', 'd', 'u', 'u'], # ↑ ↓ ↑ ↑
@@ -12,4 +12,4 @@ sample = [
 ]
 ```
 
-2) to find a position from which you should start and determine a longest chain. 
+2) find a position from which you should start and determine a longest chain. 
