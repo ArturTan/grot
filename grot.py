@@ -79,9 +79,11 @@ class GrotSearcher():
         
     def if_point_has_history(self, chain, a, b):      
 
-        """ If our point has a history (i.e. it """
-        """ has beem verified) we will add it and """
-        """ maybe its chain to chain being created """
+        """ 
+        If our point has a history (i.e. it
+        has beem verified) we will add it and
+        maybe its chain to chain being created 
+        """
 
         # Choose the chain with b,a from chains. 
         # If it contains sth - we will took only the first one
@@ -104,7 +106,7 @@ class GrotSearcher():
 
     def backend(self):
         
-        """It is our basic for searching the longest chain"""
+        """It is our base for searching the longest chain"""
         
         # for loops will give us coordinates that we will check
         
@@ -123,10 +125,12 @@ class GrotSearcher():
         
     def step_by_step(self, x, y, stop, chain):
         
-        """ input a coordinate we start at """ 
-        """ output: new coordinates """
-        """ + value of stop """
-        """ + chain with starting coordinates"""
+        """ 
+        Input a coordinate we start at  
+        Output: new coordinates
+        + value of stop 
+        + chain with starting coordinates
+        """
         
         wektor = self.sample[y][x]
         
@@ -206,15 +210,3 @@ class Viewer():
         for i in sample2:
             print(i)
 
-        
-if __name__ == "__main__":
-    
-    side_length = int(input("What is side of your sample?:   "))
-    sample, sample2 = sample_generator(side_length)
-    o = range(len(sample[0]))
-    chains = [] # here we put all chains that are in our sample
-    grot_search = GrotSearcher(sample, chains, o)
-    chains = grot_search.backend()
-    
-    max_lens = Viewer.max_lens(chains)
-    Viewer.shower(max_lens, chains, sample2)
