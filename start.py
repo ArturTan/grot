@@ -7,7 +7,7 @@ if __name__ == "__main__":
     o = range(len(sample[0]))
     chains = [] # here we put all chains that are in our sample
     grot_search = grot.GrotSearcher(sample, chains, o)
-    chains = grot.grot_search.backend()
+    chains = grot_search.backend()
     
     max_lens = grot.max_lens(chains)
     grot.hower(max_lens, chains, sample2)
