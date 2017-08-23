@@ -9,5 +9,5 @@ if __name__ == "__main__":
     grot_search = grot.GrotSearcher(sample, chains, o)
     chains = grot_search.backend()
     
-    max_lens = grot.max_lens(chains)
-    grot.hower(max_lens, chains, sample2)
+    max_lens = grot.Viewer.max_lens(chains)
+    grot.Viewer.shower(max_lens, chains, sample2)
